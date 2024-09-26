@@ -1,0 +1,33 @@
+/*
+ * This file is part of Spraymaker.
+ * Spraymaker is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ * Spraymaker is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License along with Spraymaker. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+#ifndef SIZEDISPLAYLABEL_H
+#define SIZEDISPLAYLABEL_H
+
+#include <QLabel>
+
+class SizeDisplayLabel : public QLabel
+{
+    Q_OBJECT
+public:
+    SizeDisplayLabel();
+
+public slots:
+    void setFileSize(int size);
+    void setMaxFileSize(int maxSize);
+
+private:
+    int fileSize;
+    int maxFileSize;
+
+    QPalette goodPalette = palette();
+    QPalette badPalette = QPalette(goodPalette);
+
+    void updateDisplay();
+};
+
+#endif // SIZEDISPLAYLABEL_H
