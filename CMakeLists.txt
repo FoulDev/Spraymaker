@@ -1,5 +1,12 @@
 cmake_minimum_required(VERSION 3.16)
-project(Spraymaker VERSION 2.0.1 LANGUAGES CXX)
+
+include(CheckIPOSupported)
+check_ipo_supported(RESULT HAS_IPO)
+if(HAS_IPO)
+    set(CMAKE_INTERPROCEDURAL_OPTIMIZATION TRUE)
+endif()
+
+project(Spraymaker VERSION 2.0.2 LANGUAGES CXX)
 
 find_package(Qt6 REQUIRED COMPONENTS Widgets LinguistTools)
 

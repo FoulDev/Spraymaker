@@ -90,3 +90,10 @@ install(TARGETS Spraymaker
 )
 
 qt_finalize_executable(Spraymaker)
+
+add_custom_command(
+    TARGET Spraymaker POST_BUILD
+    DEPENDS Spraymaker
+    COMMAND $<$<CONFIG:release>:${CMAKE_STRIP}>
+    ARGS --strip-all $<TARGET_FILE:Spraymaker>
+)
