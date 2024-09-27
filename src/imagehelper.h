@@ -12,7 +12,7 @@
 
 #include <QPixmap>
 #include <QString>
-#include <crunch/crnlib/crn_color.h>
+#include <crnlib/crn_color.h>
 
 // ========== ImageHelper ==========
 

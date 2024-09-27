@@ -14,8 +14,8 @@
 #include "gamespray.h"
 #include "settings.h"
 
-#include <crunch/inc/crnlib.h>
-#include <crunch/crnlib/crn_mipmapped_texture.h>
+#include <crnlib.h>
+#include <crnlib/crn_mipmapped_texture.h>
 
 #include <iostream>
 #include <fstream>

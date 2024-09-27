@@ -7,4 +7,5 @@ qt_standard_project_setup(
     I18N_SOURCE_LANGUAGE en
     I18N_TRANSLATED_LANGUAGES es de fr)
 
+add_subdirectory(dependencies)
 add_subdirectory(src)

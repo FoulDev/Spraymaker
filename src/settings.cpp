@@ -8,7 +8,7 @@
 #include "settings.h"
 #include <QCoreApplication>
 #include <QSettings>
-#include <crunch/inc/crnlib.h>
+#include <crnlib.h>
 
 #include <thread>
 

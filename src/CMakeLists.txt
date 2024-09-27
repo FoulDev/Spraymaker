@@ -55,6 +55,8 @@ target_link_libraries(Spraymaker PRIVATE Qt6::Widgets)
 
 # ========== crnlib ==========
 target_link_libraries(Spraymaker PRIVATE crn)
+target_include_directories(Spraymaker PRIVATE ${crunch_SOURCE_DIR})
+target_include_directories(Spraymaker PRIVATE ${crunch_SOURCE_DIR}/inc)
 
 # ========== libvips ==========
 pkg_search_module(VIPS REQUIRED IMPORTED_TARGET vips-cpp)

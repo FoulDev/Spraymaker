@@ -15,7 +15,7 @@ extern "C"
 #include <libavformat/avformat.h>
 }
 
-#include <crunch/inc/crnlib.h>
+#include <crnlib.h>
 
 #include <memory>
 

@@ -1,0 +1,5 @@
+set(BUILD_CRUNCH OFF)
+set(BUILD_SHARED_LIBCRN OFF)
+set(BUILD_STATIC_LIBCRN ON)
+set(USE_LTO ON)
+FetchContent_MakeAvailable(crnlib)

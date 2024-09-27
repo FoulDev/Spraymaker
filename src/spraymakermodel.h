@@ -11,8 +11,8 @@
 #include "imagemanager.h"
 #include "vtf_defs.h"
 
-#include <crunch/inc/dds_defs.h>
-#include <crunch/inc/crnlib.h>
+#include <dds_defs.h>
+#include <crnlib.h>
 
 #include <QObject>
 

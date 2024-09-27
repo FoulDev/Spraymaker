@@ -15,7 +15,7 @@
 #include <QMainWindow>
 #include <QProgressBar>
 
-#include <crunch/inc/crnlib.h>
+#include <crnlib.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {

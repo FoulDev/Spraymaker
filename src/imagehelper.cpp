@@ -7,7 +7,7 @@
 
 #include "imagehelper.h"
 #include "spraymakerexception.h"
-#include <crunch/crnlib/crn_color.h>
+#include <crnlib/crn_color.h>
 
 uint ImageHelper::getPixelArtBoxSize(const vips::VImage img)
 {
