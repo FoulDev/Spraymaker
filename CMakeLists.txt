@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(Spraymaker VERSION 2.0.0 LANGUAGES CXX)
+project(Spraymaker VERSION 2.0.1 LANGUAGES CXX)
 
 find_package(Qt6 REQUIRED COMPONENTS Widgets LinguistTools)
 

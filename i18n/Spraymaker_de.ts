@@ -99,102 +99,102 @@ x
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/spraymaker.ui" line="69"/>
+        <location filename="../src/spraymaker.ui" line="255"/>
         <source>Manual</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/spraymaker.ui" line="81"/>
+        <location filename="../src/spraymaker.ui" line="267"/>
         <source>Width</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/spraymaker.ui" line="107"/>
+        <location filename="../src/spraymaker.ui" line="293"/>
         <source>Height</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/spraymaker.ui" line="160"/>
+        <location filename="../src/spraymaker.ui" line="346"/>
         <source>Frames</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/spraymaker.ui" line="217"/>
+        <location filename="../src/spraymaker.ui" line="403"/>
         <source>Mipmaps</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/spraymaker.ui" line="246"/>
+        <location filename="../src/spraymaker.ui" line="432"/>
         <source>Fade mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/spraymaker.ui" line="257"/>
+        <location filename="../src/spraymaker.ui" line="443"/>
         <source>Gradual</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/spraymaker.ui" line="262"/>
+        <location filename="../src/spraymaker.ui" line="448"/>
         <source>Instant</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/spraymaker.ui" line="267"/>
+        <location filename="../src/spraymaker.ui" line="453"/>
         <source>Pixel art</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/spraymaker.ui" line="292"/>
+        <location filename="../src/spraymaker.ui" line="478"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Enable all image formats.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-style:italic; vertical-align:sub;&quot;&gt;Only do this if you know what you&apos;re doing.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/spraymaker.ui" line="319"/>
+        <location filename="../src/spraymaker.ui" line="39"/>
         <source>Save...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/spraymaker.ui" line="334"/>
+        <location filename="../src/spraymaker.ui" line="57"/>
         <source>Background colour</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/spraymaker.ui" line="362"/>
+        <location filename="../src/spraymaker.ui" line="85"/>
         <source>A</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/spraymaker.ui" line="391"/>
+        <location filename="../src/spraymaker.ui" line="114"/>
         <source>G</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/spraymaker.ui" line="398"/>
+        <location filename="../src/spraymaker.ui" line="121"/>
         <source>R</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/spraymaker.ui" line="449"/>
+        <location filename="../src/spraymaker.ui" line="172"/>
         <source>B</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/spraymaker.ui" line="475"/>
+        <location filename="../src/spraymaker.ui" line="198"/>
         <source>Autocrop</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/spraymaker.ui" line="500"/>
+        <location filename="../src/spraymaker.ui" line="525"/>
         <source>Help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/spraymaker.ui" line="509"/>
+        <location filename="../src/spraymaker.ui" line="534"/>
         <source>&amp;About Spraymaker...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/spraymaker.ui" line="514"/>
+        <location filename="../src/spraymaker.ui" line="539"/>
         <source>&amp;Check for update</source>
         <translation type="unfinished"></translation>
     </message>
