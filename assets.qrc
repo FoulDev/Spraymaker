@@ -1,9 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>licenses/crnlib.txt</file>
-        <file>licenses/ffmpeg.md</file>
-        <file>licenses/libvips.txt</file>
-        <file>licenses/qt.txt</file>
-        <file>licenses/spraymaker.txt</file>
-    </qresource>
-</RCC>

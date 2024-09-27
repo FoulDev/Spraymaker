@@ -764,19 +764,19 @@ void Spraymaker::aboutDialog()
                                     .arg(SPRAYMAKER_VERSION_MAJOR)
                                     .arg(SPRAYMAKER_VERSION_MINOR)
                                     .arg(SPRAYMAKER_VERSION_PATCH),
-                                ":/licenses/spraymaker.txt"),
+                                ":/assets/licenses/spraymaker.txt"),
                      "Spraymaker");
     licenses->addTab(licenseTab(QString("Qt %1").arg(qVersion()),
-                                ":/licenses/qt.txt"),
+                                ":/assets/licenses/qt.txt"),
                      "Qt");
     licenses->addTab(licenseTab(QString("crnlib %1").arg(crnlibVersion),
-                                ":/licenses/crnlib.txt"),
+                                ":/assets/licenses/crnlib.txt"),
                      "crnlib");
     licenses->addTab(licenseTab(QString("libvips %1").arg(vips_version_string()),
-                                ":/licenses/libvips.txt"),
+                                ":/assets/licenses/libvips.txt"),
                      "libvips");
     licenses->addTab(licenseTab(ffmpegVersions,
-                                ":/licenses/ffmpeg.md"),
+                                ":/assets/licenses/ffmpeg.md"),
                      "FFmpeg");
 
     auto aboutLayout = new QVBoxLayout();
