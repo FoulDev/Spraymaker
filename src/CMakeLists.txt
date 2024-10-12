@@ -1,7 +1,3 @@
-cmake_minimum_required(VERSION 3.16)
-
-set(CMAKE_INSTALL_PREFIX dist/${CMAKE_SYSTEM_NAME}/${CMAKE_SYSTEM_PROCESSOR})
-
 add_compile_definitions(SPRAYMAKER_VERSION_MAJOR=${PROJECT_VERSION_MAJOR})
 add_compile_definitions(SPRAYMAKER_VERSION_MINOR=${PROJECT_VERSION_MINOR})
 add_compile_definitions(SPRAYMAKER_VERSION_PATCH=${PROJECT_VERSION_PATCH})
@@ -64,11 +60,8 @@ target_link_libraries(Spraymaker PRIVATE PkgConfig::VIPS)
 
 # ========== ffmpeg ==========
 pkg_check_modules(LIBAV REQUIRED IMPORTED_TARGET
-    libavdevice
-    libavfilter
     libavformat
     libavcodec
-    libswresample
     libswscale
     libavutil
 )
@@ -97,3 +90,26 @@ add_custom_command(
     COMMAND $<$<CONFIG:release>:${CMAKE_STRIP}>
     ARGS --strip-all $<TARGET_FILE:Spraymaker>
 )
+
+if (WIN32 OR MSYS OR CYGWIN)
+    install(TARGETS Spraymaker
+        RUNTIME ARCHIVE LIBRARY FRAMEWORK BUNDLE PUBLIC_HEADER RESOURCE
+    )
+
+    install(TARGETS Spraymaker
+        COMPONENT Spraymaker
+        RUNTIME_DEPENDENCIES
+        PRE_EXCLUDE_REGEXES "api-ms-" "ext-ms-"
+        POST_EXCLUDE_REGEXES ".*system32/.*\\.dll"
+        DIRECTORIES ${DLL_DIRECTORIES}
+    )
+
+    install(FILES $<TARGET_RUNTIME_DLLS:Spraymaker> TYPE BIN)
+endif()
+
+qt_generate_deploy_app_script(
+    TARGET Spraymaker
+    OUTPUT_SCRIPT deploy_script
+    NO_UNSUPPORTED_PLATFORM_ERROR
+)
+install(SCRIPT ${deploy_script})

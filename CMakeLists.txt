@@ -1,5 +1,9 @@
 cmake_minimum_required(VERSION 3.30)
 
+if (WIN32 OR MSYS OR CYGWIN)
+    set(DLL_DIRECTORIES "" CACHE PATH "Path(s) containing DLLs for Windows deployments")
+endif()
+
 include(CheckIPOSupported)
 check_ipo_supported(RESULT HAS_IPO)
 if(HAS_IPO)
