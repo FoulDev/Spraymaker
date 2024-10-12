@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.30)
 
 include(CheckIPOSupported)
 check_ipo_supported(RESULT HAS_IPO)
