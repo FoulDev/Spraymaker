@@ -70,7 +70,7 @@ Spraymaker::Spraymaker(QWidget *parent)
 
     setAttribute(Qt::WA_DeleteOnClose); // Call destructors on exit
 
-    // Load logo directory paths from settings
+    // Verify logodirs from settings still exist
     {
         auto logodirs = settings->getLogoDirs();
 
@@ -78,7 +78,7 @@ Spraymaker::Spraymaker(QWidget *parent)
         {
             auto status = tryAddGame(logodir);
 
-            if (status != TryAddGameResult::Success)
+            if (status == TryAddGameResult::LogosDirNotFound)
             {
                 settings->removeLogoDir(logodir);
                 qWarning() << "Failed adding logodir " + logodir + " from settings.";
