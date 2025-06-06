@@ -10,7 +10,7 @@ if(HAS_IPO)
     set(CMAKE_INTERPROCEDURAL_OPTIMIZATION TRUE)
 endif()
 
-project(Spraymaker VERSION 2.0.2 LANGUAGES CXX)
+project(Spraymaker VERSION 2.0.3 LANGUAGES CXX)
 
 find_package(Qt6 REQUIRED COMPONENTS Widgets LinguistTools)
 
