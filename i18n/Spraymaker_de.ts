@@ -77,7 +77,7 @@ x
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/gamespray.cpp" line="68"/>
+        <location filename="../src/gamespray.cpp" line="71"/>
         <source>Failed to find a materials/vgui/logos/ directory within:
 %1</source>
         <translation type="unfinished"></translation>
@@ -338,23 +338,28 @@ x
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/spraymakermodel.h" line="208"/>
+        <location filename="../src/spraymakermodel.h" line="215"/>
         <source>Stencil with full transparency</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/spraymakermodel.h" line="214"/>
+        <location filename="../src/spraymakermodel.h" line="221"/>
         <source>Uncompressed black and white</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/spraymakermodel.h" line="221"/>
+        <location filename="../src/spraymakermodel.h" line="228"/>
+        <source>256-colour palette</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/spraymakermodel.h" line="236"/>
         <source>Uncompressed black and white with full transparency</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/spraymakermodel.h" line="229"/>
-        <location filename="../src/spraymakermodel.h" line="230"/>
+        <location filename="../src/spraymakermodel.h" line="244"/>
+        <location filename="../src/spraymakermodel.h" line="245"/>
         <source>RGB888 Bluescreen</source>
         <translation type="unfinished"></translation>
     </message>

@@ -30,6 +30,9 @@ GameSpray::GameSpray(QString directory)
         logosDir = vtfDir;
     }
 
+    // TODO: Continue searching for other logodirs instead of stopping at the first found
+    // TODO: Limit search iterations and/or time
+
     if (found == false)
     {
         QDirIterator findLogosDir(dir, QDirIterator::Subdirectories);

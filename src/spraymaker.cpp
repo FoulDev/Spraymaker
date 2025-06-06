@@ -549,9 +549,9 @@ Spraymaker::Spraymaker(QWidget *parent)
     // Background colour selectors
     connect(ui->redSlider,   &QSlider::sliderMoved,
             spraymakerModel, &SpraymakerModel::setBackgroundRed);
-    connect(ui->greenSlider,  &QSlider::sliderMoved,
+    connect(ui->greenSlider, &QSlider::sliderMoved,
             spraymakerModel, &SpraymakerModel::setBackgroundGreen);
-    connect(ui->blueSlider, &QSlider::sliderMoved,
+    connect(ui->blueSlider,  &QSlider::sliderMoved,
             spraymakerModel, &SpraymakerModel::setBackgroundBlue);
     connect(ui->alphaSlider, &QSlider::sliderMoved,
             spraymakerModel, &SpraymakerModel::setBackgroundAlpha);
