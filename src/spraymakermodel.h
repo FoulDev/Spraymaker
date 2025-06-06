@@ -202,6 +202,13 @@ public:
                 .simpleName = tr("Uncompressed with full transparency"),
                 .realName   = "BGRA8888",
             },{
+                .format     = ImageFormat::BGRX8888,
+                .crnFormat  = crnlib::pixel_format::PIXEL_FMT_A8R8G8B8,
+                .vtfFormat  = VTF_IMAGE_FORMAT::BGRX8888,
+                .simpleName = "BGRX8888",
+                .realName   = "BGRX8888",
+                .hide       = true, // X component
+            },{
                 .format     = ImageFormat::A8,
                 .crnFormat  = crnlib::pixel_format::PIXEL_FMT_A8,
                 .vtfFormat  = VTF_IMAGE_FORMAT::A8,
@@ -214,6 +221,14 @@ public:
                 .simpleName = tr("Uncompressed black and white"),
                 .realName   = "I8",
                 .isSimple   = true,
+            },{
+                .format     = ImageFormat::P8,
+                .crnFormat  = crnlib::pixel_format::PIXEL_FMT_INVALID,
+                .vtfFormat  = VTF_IMAGE_FORMAT::P8,
+                .simpleName = tr("256-colour palette"),
+                .realName   = "P8",
+                .isSimple   = false,
+                .hide       = true, // Not implemented; VTF doesn't support it anyway
             },{
                 .format     = ImageFormat::IA88,
                 .crnFormat  = crnlib::pixel_format::PIXEL_FMT_A8L8,
@@ -258,7 +273,8 @@ public:
                 .crnFormat  = crnlib::pixel_format::PIXEL_FMT_A8R8G8B8,
                 .vtfFormat  = VTF_IMAGE_FORMAT::BGRX5551,
                 .simpleName = "BGRX5551",
-               .realName    = "BGRX5551",
+                .realName   = "BGRX5551",
+                .hide       = true, // X component
             },{
                 .format     = ImageFormat::UV88,
                 .crnFormat  = crnlib::pixel_format::PIXEL_FMT_R8G8B8,
@@ -279,7 +295,7 @@ public:
                 .vtfFormat  = VTF_IMAGE_FORMAT::UVLX8888,
                 .simpleName = "UVLX8888",
                 .realName   = "UVLX8888",
-                .hide       = true, // Fake implementation
+                .hide       = true, // Fake implementation, X component
             },{
                 .format     = ImageFormat::RGBA16161616,
                 .crnFormat  = crnlib::pixel_format::PIXEL_FMT_A8R8G8B8,
@@ -288,12 +304,47 @@ public:
                 .realName   = "RGBA16161616",
                 .hide       = true, // Not implemented correctly
             },{
+                .format     = ImageFormat::RGBA16161616F,
+                .crnFormat  = crnlib::pixel_format::PIXEL_FMT_A8R8G8B8,
+                .vtfFormat  = VTF_IMAGE_FORMAT::RGBA16161616F,
+                .simpleName = "RGBA16161616F",
+                .realName   = "RGBA16161616F",
+                .hide       = true, // Not implemented
+            },{
+                .format     = ImageFormat::R32F,
+                .crnFormat  = crnlib::pixel_format::PIXEL_FMT_A8R8G8B8,
+                .vtfFormat  = VTF_IMAGE_FORMAT::R32F,
+                .simpleName = "R32F",
+                .realName   = "R32F",
+                .hide       = true, // Not implemented
+            },{
+                .format     = ImageFormat::RGB323232F,
+                .crnFormat  = crnlib::pixel_format::PIXEL_FMT_A8R8G8B8,
+                .vtfFormat  = VTF_IMAGE_FORMAT::RGB323232F,
+                .simpleName = "RGB323232F",
+                .realName   = "RGB323232F",
+                .hide       = true, // Not implemented
+            },{
                 .format     = ImageFormat::RGBA32323232F,
                 .crnFormat  = crnlib::pixel_format::PIXEL_FMT_A8R8G8B8,
                 .vtfFormat  = VTF_IMAGE_FORMAT::RGBA32323232F,
                 .simpleName = "RGBA32323232F",
                 .realName   = "RGBA32323232F",
                 .hide       = true, // Not implemented correctly
+            },{
+                .format     = ImageFormat::ABGR8888,
+                .crnFormat  = crnlib::pixel_format::PIXEL_FMT_A8R8G8B8,
+                .vtfFormat  = VTF_IMAGE_FORMAT::ABGR8888,
+                .simpleName = "ABGR8888",
+                .realName   = "ABGR8888",
+                .hide       = true, // Not implemented
+            },{
+                .format     = ImageFormat::ARGB8888,
+                .crnFormat  = crnlib::pixel_format::PIXEL_FMT_A8R8G8B8,
+                .vtfFormat  = VTF_IMAGE_FORMAT::ARGB8888,
+                .simpleName = "ARGB8888",
+                .realName   = "ARGB8888",
+                .hide       = true, // Not implemented
             },
         };
 
