@@ -44,14 +44,30 @@
 
 extern "C"
 {
+#if __has_include(<libavutil/version.h>)
 #include <libavutil/version.h>
+#endif
+#if __has_include(<libavcodec/version.h>)
 #include <libavcodec/version.h>
+#endif
+#if __has_include(<libavformat/version.h>)
 #include <libavformat/version.h>
+#endif
+#if __has_include(<libavdevice/version.h>)
 #include <libavdevice/version.h>
+#endif
+#if __has_include(<libavfilter/version.h>)
 #include <libavfilter/version.h>
+#endif
+#if __has_include(<libswscale/version.h>)
 #include <libswscale/version.h>
+#endif
+#if __has_include(<libswresample/version.h>)
 #include <libswresample/version.h>
+#endif
+#if __has_include(<libpostproc/version.h>)
 #include <libpostproc/version.h>
+#endif
 }
 
 #include "./ui_spraymaker.h"
@@ -726,38 +742,56 @@ void Spraymaker::aboutDialog()
 
     auto crnlibVersion = QString("%1.%2").arg(CRNLIB_VERSION / 100U).arg(CRNLIB_VERSION % 100U);
 
-    auto ffmpegVersions = QString("libavutil %1.%2.%3")
+    auto ffmpegVersions = QString();
+#ifdef AVUTIL_VERSION_H
+    ffmpegVersions.append(QString("libavutil %1.%2.%3\n")
                               .arg(LIBAVUTIL_VERSION_MAJOR)
                               .arg(LIBAVUTIL_VERSION_MINOR)
-                              .arg(LIBAVUTIL_VERSION_MICRO);
-    ffmpegVersions.append(QString("\nlibavcodec %1.%2.%3")
+                              .arg(LIBAVUTIL_VERSION_MICRO));
+#endif
+#ifdef AVCODEC_VERSION_H
+    ffmpegVersions.append(QString("libavcodec %1.%2.%3\n")
                               .arg(LIBAVCODEC_VERSION_MAJOR)
                               .arg(LIBAVCODEC_VERSION_MINOR)
                               .arg(LIBAVCODEC_VERSION_MICRO));
-    ffmpegVersions.append(QString("\nlibavformat %1.%2.%3")
+#endif
+#ifdef AVFORMAT_VERSION_H
+    ffmpegVersions.append(QString("libavformat %1.%2.%3\n")
                               .arg(LIBAVFORMAT_VERSION_MAJOR)
                               .arg(LIBAVFORMAT_VERSION_MINOR)
                               .arg(LIBAVFORMAT_VERSION_MICRO));
-    ffmpegVersions.append(QString("\nlibavdevice %1.%2.%3")
+#endif
+#ifdef AVDEVICE_VERSION_H
+    ffmpegVersions.append(QString("libavdevice %1.%2.%3\n")
                               .arg(LIBAVDEVICE_VERSION_MAJOR)
                               .arg(LIBAVDEVICE_VERSION_MINOR)
                               .arg(LIBAVDEVICE_VERSION_MICRO));
-    ffmpegVersions.append(QString("\nlibavfilter %1.%2.%3")
+#endif
+#ifdef AVFILTER_VERSION_H
+    ffmpegVersions.append(QString("libavfilter %1.%2.%3\n")
                               .arg(LIBAVFILTER_VERSION_MAJOR)
                               .arg(LIBAVFILTER_VERSION_MINOR)
                               .arg(LIBAVFILTER_VERSION_MICRO));
-    ffmpegVersions.append(QString("\nlibswscale %1.%2.%3")
+#endif
+#ifdef SWSCALE_VERSION_H
+    ffmpegVersions.append(QString("libswscale %1.%2.%3\n")
                               .arg(LIBSWSCALE_VERSION_MAJOR)
                               .arg(LIBSWSCALE_VERSION_MINOR)
                               .arg(LIBSWSCALE_VERSION_MICRO));
-    ffmpegVersions.append(QString("\nlibswresample %1.%2.%3")
+#endif
+#ifdef SWRESAMPLE_VERSION_H
+    ffmpegVersions.append(QString("libswresample %1.%2.%3\n")
                               .arg(LIBSWRESAMPLE_VERSION_MAJOR)
                               .arg(LIBSWRESAMPLE_VERSION_MINOR)
                               .arg(LIBSWRESAMPLE_VERSION_MICRO));
-    ffmpegVersions.append(QString("\nlibpostproc %1.%2.%3")
+#endif
+#ifdef POSTPROC_VERSION_H
+    ffmpegVersions.append(QString("libpostproc %1.%2.%3\n")
                               .arg(LIBPOSTPROC_VERSION_MAJOR)
                               .arg(LIBPOSTPROC_VERSION_MINOR)
                               .arg(LIBPOSTPROC_VERSION_MICRO));
+#endif
+    if (ffmpegVersions.endsWith("\n")) { ffmpegVersions.chop(1); }
 
     auto licenses = new QTabWidget();
     licenses->addTab(licenseTab(QString("Spraymaker %1.%2.%3")
